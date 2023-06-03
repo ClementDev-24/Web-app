@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Madras Gig Music</title>
+    <link rel="stylesheet" href="./m-world light.css" id="css1" >
+    <link rel="stylesheet" href="./m-world.css" id="css2" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #hi button a{
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            padding: 1em;
+        }
+    #logo1{
+        position: absolute;
+    }
+    #img1{
+        position: relative;
+        left: 415px;
+        top: 85px;
+        height: 40px;
+        width: 50px;
+    }
+    </style>
+    <script src="./theme.js"></script>
+    <script src="./pagechange.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo1"><img src="./m logo.png" alt="" srcset="" id="img1"></li>
+                <li><a href="./Home page.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#"><button id="menu"onclick="showOptions()"><span class="material-symbols-outlined">menu</span></button></a>
+                    <div id="options" style="display: none;">
+                    <label for=""><a href="./Login page.html">Logout</a></label><br><br>
+                    <label for="theme">Theme:</label>
+                    <select id="theme" onchange="changecss()">
+                        <option value="light">Dark mode</option>
+                        <option value="dark">Light mode</option>
+                    </select>
+                    <br><br>
+                    <label for="">Movies:</label>
+                    <select id="pageSelect" onchange="changePage()">
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select><br><br>
+                    <label for=""><a href="./Music.html">Music</a></label>
+                    </div></li>
+                    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>MADRAS GIG PLAYLIST</h1>
+    </main>
+    <div>
+        <img src="./7up/Kettavano.jpg" alt="" width="300px" height="300px"><p><strong>Kettavano</strong></p><br><audio src="./7up/Kettavano au.mp3" controls ></audio><br>
+        <img src="./7up/Kanne-Kanne.jpg" alt="" width="300px" height="300px"><p><strong>Kanne Kanne</strong></p> <br><audio src="./7up/Kanne Kanne au.mp3" controls ></audio><br>
+        <img src="./7up/Orasaadha.jpg" alt="" width="300px" height="300px"><p><strong>Orasaadha</strong></p><br><audio src="./7up/Orasaadha au.mp3" controls ></audio><br>
+        <img src="./7up/Raati.jpg" alt="" width="300px" height="300px"><p><strong>Raati</strong></p><br><audio src="./7up/Raati au.mp3" controls ></audio><br>
+        <img src="./7up/Rasaathi-Nenja.jpg" alt="" width="300px" height="300px"><p><strong>Rasaathi-Nenja</strong></p><br><audio src="./7up/Rasaathi Nenja au.mp3" controls ></audio><br>
+        
+        <button id="hi"><a href="./Music.html">Back</a></button>
+    </div>
+    <footer>
+        <p>&copy;2023 M-WORLD Entertainment</p>
+    </footer>
+</body>
+</html>

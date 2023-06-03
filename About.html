@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About M-WORLD Entertainment</title>
+    <link rel="icon" href="./m logo.png">
+    <link rel="stylesheet" href="./m-world light.css" id="css1" >
+    <link rel="stylesheet" href="./m-world.css" id="css2" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <style>
+    #logo1{
+        position: absolute;
+    }
+    #img1{
+        position: relative;
+        left: 365px;
+        top: 85px;
+        height: 40px;
+        width: 50px;
+    }
+      marquee{
+        background-color: rgb(7, 230, 200);
+        color: black;
+        }
+  </style>
+  <script src="./theme.js"></script>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li id="logo1"><img src="./m logo.png" alt="" srcset="" id="img1"></li>
+          <li><a href="./Home page.html">Home</a></li>
+          <li><a href="./About.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="#"><button id="menu"onclick="showOptions()"><span class="material-symbols-outlined">menu</span></button></a>
+            <div id="options" style="display: none;">
+            <label for=""><a href="./Login page.html">Logout</a></label><br><br>
+            <label for="theme">Theme:</label>
+            <select id="theme" onchange="changecss()">
+                <option value="light">Dark mode</option>
+                <option value="dark">Light mode</option>
+            </select>
+            </div></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>About M-WORLD Entertainment</h1>
+      <marquee behavior="">Experience the magic of music and movies, anytime, anywhere!</marquee><br>
+      <p>We are an online entertainment webpage dedicated to providing high-quality movies and music streaming services to our customers. 
+        Our journey began in 2022, </p><p> when we noticed the growing demand for on-demand entertainment services.</p><br>
+      <p>Thank you for choosing M-WORLD Entertainment for all your Entertainment needs. We look forward to serving you and helping you find exactly what you're looking for.</p>
+    </main>
+    <footer>
+      <p>&copy;2023 M-WORLD Entertainment</p>
+    </footer>
+  </body>
+</html>

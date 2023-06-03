@@ -1,0 +1,174 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up | M-WORLD Entertainment</title>
+  <link rel="icon" href="./m logo.png">
+  <link rel="stylesheet" href="./m-world light.css" id="css1" >
+  <link rel="stylesheet" href="./m-world.css" id="css2" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <style>
+    img{
+      position: absolute;
+      height: 70px;
+      width: 75px;
+      left: 480px;
+    }
+    #formm>*:not(button):not(img){
+      border-radius: 20px ;
+      outline: none;
+      width: 300px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }   
+    img{
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      left: 550px;
+    }
+    #formm>button,a{
+      left: auto;
+    }
+    #formm>button{
+      position: relative;
+      left: 100px;  
+    } 
+      marquee{
+        background-color: rgb(7, 230, 200);
+        color: black;
+      }
+      #logo1{
+        position: absolute;
+    }
+    #img1{
+        position: relative;
+        left: 435px;
+        top: 85px;
+        height: 40px;
+        width: 50px;
+    }
+    #noo{
+      position: relative;
+      left: 80px;
+    }
+    #error{
+      color: red;
+      position: relative;
+      left: 80px;
+    }
+    #back a{
+      color: black;
+      text-decoration: none;
+    }
+      
+  </style> 
+  <script src="./theme.js"></script>
+  <script>
+          function signup(){
+            let email=document.getElementById("mail").value;
+            let Phone_number=document.getElementById("phone").value;
+            let pass=document.getElementById("password").value;
+            let confirm_password=document.getElementById("confirm").value;
+            // Email Validation
+            let flag_mail=false;
+            for(let i=0;i<email.length;i++){
+                if(email[i]=='@'){
+                    flag_mail=true;
+                }
+            }
+            // Phone Number Validation
+            let flag_phone=false;
+            if((6000000000<=Phone_number)&&(Phone_number<=9999999999)){
+                flag_phone=true;
+            }
+            // Password Validation
+            let len=pass.length;
+            let upper=0;
+            let lower=0;
+            let num=0;
+            let special=0;
+            let flag_pass=false;
+            for(let i=0;i<len;i++){
+                if(('A'<=pass[i])&&(pass[i]<='Z')){
+                    upper++;
+                }else if(('a'<=pass[i])&&(pass[i]<='z')){
+                    lower++;
+                }else if(('0'<=pass[i])&&(pass[i]<='9')){
+                    num++;
+                }else{
+                    special++;
+                }
+            }
+            if((8<=len)&&(len<=16)&&(upper>=1)&&(lower>=1)&&(num>=1)&&(special>=1)){
+                flag_pass=true;
+              }
+            // Confirm Password Validation
+                let flag_confirm=false;
+                if(pass==confirm_password){
+                  flag_confirm=true;
+                }
+                if((flag_phone==true)&&(flag_mail==true)&&(flag_pass==true)&&(flag_confirm==true)){
+                  window.location.href="";
+                }
+                else{
+                  document.getElementById("error").innerHTML="Enter valid details";
+                }
+            }
+  </script>
+</head>
+<body> 
+  <header>
+    <nav>
+      <ul>
+        <li id="logo1"><img src="./m logo.png" alt="" srcset="" id="img1"></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="#"><button id="menu"onclick="showOptions()"><span class="material-symbols-outlined">menu</span></button></a>
+          <div id="options" style="display: none;">
+            <label for=""><a href="#">Logout</a></label><br><br>
+            <label for="theme">Theme:</label>
+            <select id="theme" onchange="changecss()">
+              <option value="light">Dark mode</option>
+              <option value="dark">Light mode</option>
+            </select>
+          </div></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Sign Up To M-WORLD</h1>
+    <h5>Experience the magic of music and movies, anytime, anywhere!</h5>
+    <form action="./Sign up success.html" id="formm">
+      <label for="">Name:</label>
+      <input type="text" placeholder="Name" required>
+      <label for="">Phone number:</label>
+      <input type="number" placeholder="phone number" id="phone" required>
+      <label for="">D.O.B</label>
+      <input type="date">
+      <label for="">Email:</label>
+      <input type="email" placeholder="email" id="mail" required>
+      <label for="">Gender:</label>
+      <select name="Gender" id="">
+        <option value="Gender">Male</option>
+        <option value="Gender">Female</option>
+        <option value="Gender">Other</option>
+      </select>
+      <label for="">Password:</label>
+      <input type="password" placeholder="password" id="pass" required>
+      <label for="">Confirm Password:</label>
+      <input type="password" placeholder="confirm-password" id="confirm" required><br>
+      <img src="./Captcha.png" alt=""><br>
+      <input type="checkbox" required><p id="noo">I'm not a robot</p>
+      <p id="error"></p><br>
+      <button type="submit">Sign Up</button><br><br>
+      <button id="back"><a href="./Login page.html">Back</a></button>
+    </form>
+  </main>
+  <marquee behavior="" direction="left">Experience the magic of music and movies, anytime, anywhere!</marquee>
+  <footer>
+    &copy; 2023 M-WORLD Entertainment
+  </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Master Music</title>
+    <link rel="stylesheet" href="./m-world light.css" id="css1" >
+    <link rel="stylesheet" href="./m-world.css" id="css2" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button a{
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            padding: 1em;
+        }
+        #logo1{
+        position: absolute;
+    }
+    #img1{
+        position: relative;
+        left: 455px;
+        top: 85px;
+        height: 40px;
+        width: 50px;
+    }
+    </style>
+    <script src="./theme.js"></script>
+    <script src="./pagechange.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo1"><img src="./m logo.png" alt="" srcset="" id="img1"></li>
+                <li><a href="./Home page.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#"><button id="menu"onclick="showOptions()"><span class="material-symbols-outlined">menu</span></button></a>
+                    <div id="options" style="display: none;">
+                    <label for=""><a href="./Login page.html">Logout</a></label><br><br>
+                    <label for="theme">Theme:</label>
+                    <select id="theme" onchange="changecss()">
+                        <option value="light">Dark mode</option>
+                        <option value="dark">Light mode</option>
+                    </select>
+                    <br><br>
+                    <label for="">Movies:</label>
+                    <select id="pageSelect" onchange="changePage()">
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select><br><br>
+                    <label for=""><a href="./Music.html">Music</a></label>
+                    </div></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>MASTER PLAYLIST</h1>
+    </main>
+    <div>
+        <img src="./Master/Master-the-Blaster.jpg" alt="" width="300px" height="300px"><p><strong>Master the Blaster</strong></p> <br><audio src="./Master/Master the Blaster au.mp3" controls ></audio><br>
+        <img src="./Master/Kutti-Story.jpg" alt="" width="300px" height="300px"><p><strong>Kutty Story</strong></p> <br><audio src="./Master/Kutti Story au.mp3" controls ></audio><br>
+        <img src="./Master/aandha kaana paathaakaa.jpeg" alt="" width="300px" height="300px"><p><strong>Aandha Kaana Paathaakaa</strong></p> <br><audio src="./Master/Andha Kanna Paathaakaa au.mp3" controls ></audio><br>
+        <img src="./Master/polakatum paara.jpg" alt="" width="300px" height="300px"><p><strong>Polakattum Para Para</strong></p> <br><audio src="./Master/Polakattum Para Para au.mp3" controls ></audio><br>
+        <img src="./Master/Vaathi-Coming.jpg" alt="" width="300px" height="300px"><p><strong>Vaathi Coming</strong></p> <br><audio src="./Master/Vaathi Coming au.mp3" controls ></audio><br>
+        <img src="./Master/Vaathi-Kabaddi.jpg" alt="" width="300px" height="300px"><p><strong>Vaathi Kabaddi</strong></p> <br><audio src="./Master/Vaathi Kabaddi au.mp3" controls ></audio><br>
+        <img src="./Master/vaathi raid.jpeg" alt="" width="300px" height="300px"><p><strong>Vaathi Raid</strong></p> <br><audio src="./Master/Vaathi Raid au.mp3" controls ></audio><br>
+        <button><a href="./Music.html">Back</a></button>
+    </div>
+    <footer>
+        <p>&copy;2023 M-WORLD Entertainment</p>
+    </footer>
+</body>
+</html>
